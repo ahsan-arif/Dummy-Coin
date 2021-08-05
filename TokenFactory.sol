@@ -49,7 +49,7 @@ contract TokenFactory is ERC20{
     
     function approve (address recipient,uint256 amount) public override returns(bool){
        // _approve(msg.sender,recipient,amount);
-       require(_balances[msg.sender]>= amount, "Insufficient balance in sender's account");
+      // require(_balances[msg.sender]>= amount, "Insufficient balance in sender's account");
        _allowances[msg.sender][recipient] = amount;
        
        emit Approval(msg.sender,recipient,amount);
